@@ -50,6 +50,31 @@ Intelligent git commit command with:
 
 See [claude/commands/commit.md](claude/commands/commit.md) for full specification.
 
+## Initial Setup (First Time)
+
+After creating your dotfiles repository locally, push it to GitHub:
+
+### Option A: Using GitHub CLI (Recommended)
+
+```bash
+cd ~/dotfiles
+gh repo create dotfiles --private --source=. --push
+```
+
+### Option B: Manual GitHub Setup
+
+1. Create a new repository on [GitHub](https://github.com/new):
+   - Repository name: `dotfiles`
+   - Visibility: Private (recommended) or Public
+   - **Don't** initialize with README, .gitignore, or license (we already have these)
+
+2. Push your local repository:
+   ```bash
+   cd ~/dotfiles
+   git remote add origin git@github.com:YOUR_USERNAME/dotfiles.git
+   git push -u origin main
+   ```
+
 ## Setup on New Machine
 
 1. Clone this repository:
