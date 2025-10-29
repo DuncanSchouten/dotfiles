@@ -21,7 +21,7 @@ Custom slash commands for [Claude Code](https://claude.com/claude-code).
 The commands are automatically symlinked from this repository:
 
 ```bash
-~/.claude/commands/commit.md -> ~/dotfiles/claude/commands/commit.md
+~/.claude/commands/commit.md -> ~/GitHub/dotfiles/claude/commands/commit.md
 ```
 
 ### Available Commands
@@ -57,7 +57,7 @@ After creating your dotfiles repository locally, push it to GitHub:
 ### Option A: Using GitHub CLI (Recommended)
 
 ```bash
-cd ~/dotfiles
+cd ~/GitHub/dotfiles
 gh repo create dotfiles --private --source=. --push
 ```
 
@@ -70,7 +70,7 @@ gh repo create dotfiles --private --source=. --push
 
 2. Push your local repository:
    ```bash
-   cd ~/dotfiles
+   cd ~/GitHub/dotfiles
    git remote add origin git@github.com:YOUR_USERNAME/dotfiles.git
    git push -u origin main
    ```
@@ -79,19 +79,19 @@ gh repo create dotfiles --private --source=. --push
 
 1. Clone this repository:
    ```bash
-   git clone <your-repo-url> ~/dotfiles
+   git clone <your-repo-url> ~/GitHub/dotfiles
    ```
 
 2. Run the setup script:
    ```bash
-   cd ~/dotfiles
+   cd ~/GitHub/dotfiles
    ./setup.sh
    ```
 
 Or manually create symlinks:
    ```bash
    mkdir -p ~/.claude/commands
-   ln -sf ~/dotfiles/claude/commands/*.md ~/.claude/commands/
+   ln -sf ~/GitHub/dotfiles/claude/commands/*.md ~/.claude/commands/
    ```
 
 ## Adding New Commands
@@ -105,7 +105,7 @@ Or manually create symlinks:
 
 3. Symlink to Claude directory:
    ```bash
-   ln -sf ~/dotfiles/claude/commands/new-command.md ~/.claude/commands/
+   ln -sf ~/GitHub/dotfiles/claude/commands/new-command.md ~/.claude/commands/
    ```
 
 4. Commit and push:
@@ -117,10 +117,10 @@ Or manually create symlinks:
 
 ## Updating Commands
 
-Commands are symlinked, so edits in `~/dotfiles/` automatically reflect in `~/.claude/commands/`.
+Commands are symlinked, so edits in `~/GitHub/dotfiles/` automatically reflect in `~/.claude/commands/`.
 
 To update:
-1. Edit the file in `~/dotfiles/claude/commands/`
+1. Edit the file in `~/GitHub/dotfiles/claude/commands/`
 2. Test the command in Claude Code
 3. Commit changes:
    ```bash
