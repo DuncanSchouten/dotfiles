@@ -21,7 +21,7 @@ description: Smart git commit with semantic grouping and consolidation
 
 1. If FILES argument provided:
    - Use specified files
-   - Verify files are actually modified: !`git status --porcelain <files>`
+   - Verify files are actually modified: !`git status --porcelain {files}`
 
 2. If no FILES argument:
    - Get all changed files: !`git status --porcelain`
@@ -41,7 +41,7 @@ description: Smart git commit with semantic grouping and consolidation
 ```
 
 **CHECK and WARN (require confirmation):**
-- Large files (>10MB): !`find <files> -type f -size +10M`
+- Large files (>10MB): !`find {files} -type f -size +10M`
 - Binary files that seem unusual
 - Files outside normal project structure
 
@@ -53,7 +53,7 @@ description: Smart git commit with semantic grouping and consolidation
 
 For each file that passed safety checks:
 
-1. **Read the diff**: Use `git diff HEAD <file>` or Read tool
+1. **Read the diff**: Use `git diff HEAD {file}` or Read tool
 2. **Analyze the change semantically** by examining:
    - File path and type (migration, test, doc, source code)
    - Diff content (what changed, why, impact)
